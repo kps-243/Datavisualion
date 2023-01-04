@@ -1,14 +1,22 @@
-const barCanvas = document.getElementById("barCanvas").getContext("2d");
-const barCanvasData = {
+const ctx = document.getElementById("myChart");
+
+new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["Congo", "Nigeria", "Mali", "Maroc", "Tunisie"],
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1,
+      },
+    ],
   },
-  datasets: [
-    {
-      data: [200, 150, 240, 400, 120],
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
     },
-  ],
-};
-
-new Chart(barCanvas).Line(barCanvasData);
+  },
+});
