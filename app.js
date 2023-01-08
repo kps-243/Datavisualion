@@ -5,7 +5,7 @@ fetch(apiUrl) //Récupere les données de l'API
   .then((res) => res.json()) // Permet de lire le fichier.json
   .then((data) => {
     console.log(data);
-    const ctx = document.getElementById("myChart").getContext("2d");
+    const ctx = document.getElementById("prixVille").getContext("2d");
     const myChart = new Chart(ctx, {
       type: "line",
       data: {
