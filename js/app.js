@@ -7,9 +7,16 @@ fetch(apiUrl) //Récupere les données de l'API
     console.log(data);
     const ctx = document.getElementById("prixVille").getContext("2d");
     const myChart = new Chart(ctx, {
-      type: "line",
+      type: "bar",
       data: {
-        labels: ["Blois", "Freneuse", "Tulle"],
+        labels: [
+          data.records[0].fields.city,
+          data.records[1].fields.city,
+          data.records[2].fields.city,
+          data.records[3].fields.city,
+          data.records[4].fields.city,
+          data.records[5].fields.city,
+        ],
         datasets: [
           {
             label: "Ventes",
@@ -17,6 +24,9 @@ fetch(apiUrl) //Récupere les données de l'API
               data.records[0].fields.price_gazole,
               data.records[1].fields.price_gazole,
               data.records[2].fields.price_gazole,
+              data.records[3].fields.price_gazole,
+              data.records[4].fields.price_gazole,
+              data.records[5].fields.price_gazole,
             ], // Les données seront remplies lorsque la première requête à l'API sera effectuée
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
@@ -34,7 +44,7 @@ fetch(apiUrl) //Récupere les données de l'API
               "rgba(153, 102, 255, 1)",
               "rgba(255, 159, 64, 1)",
             ],
-            borderWidth: 1,
+            borderWidth: 2,
           },
         ],
       },
