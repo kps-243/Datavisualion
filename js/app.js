@@ -126,6 +126,60 @@ fetch(apiUrl) //Récupere les données de l'API
         ],
       },
     });
+    const service = new Chart(document.getElementById("service"), {
+      type: "radar",
+      data: {
+        labels: [
+          data.facet_groups[7].facets[0].name,
+          data.facet_groups[7].facets[1].name,
+          data.facet_groups[7].facets[2].name,
+          data.facet_groups[7].facets[3].name,
+          data.facet_groups[7].facets[5].name,
+          data.facet_groups[7].facets[6].name,
+        ],
+        datasets: [
+          {
+            label: "Blois",
+            data: [1, 1, 0, 1, 0, 1], // Les données seront remplies lorsque la première requête à l'API sera effectuée
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              // "rgba(54, 162, 235, 0.2)",
+              // "rgba(255, 206, 86, 0.2)",
+              // "rgba(75, 192, 192, 0.2)",
+              // "rgba(153, 102, 255, 0.2)",
+              // "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              // "rgba(54, 162, 235, 1)",
+              // "rgba(255, 206, 86, 1)",
+              // "rgba(75, 192, 192, 1)",
+              // "rgba(153, 102, 255, 1)",
+              // "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+          {
+            label: data.records[3].fields.city,
+            data: [1, 0, 0, 1, 0, 1],
+            backgroundColor: ["rgba(54, 162, 235, 0.2)"],
+            borderColor: ["rgba(54, 162, 235, 1)"],
+            borderWidth: 3,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          r: {
+            angleLines: {
+              display: false,
+            },
+            suggestedMin: 0,
+            suggestedMax: 1,
+          },
+        },
+      },
+    });
   })
   .catch((error) => {
     console.error(error);
