@@ -132,15 +132,21 @@ fetch(apiUrl) //Récupere les données de l'API
         labels: [
           data.facet_groups[7].facets[0].name,
           data.facet_groups[7].facets[1].name,
-          data.facet_groups[7].facets[2].name,
           data.facet_groups[7].facets[3].name,
-          data.facet_groups[7].facets[5].name,
           data.facet_groups[7].facets[6].name,
+          data.facet_groups[7].facets[7].name,
+          data.facet_groups[7].facets[8].name,
+          data.facet_groups[7].facets[9].name,
+          data.facet_groups[7].facets[10].name,
+          data.facet_groups[7].facets[14].name,
+          data.facet_groups[7].facets[11].name,
+          data.facet_groups[7].facets[12].name,
+          data.facet_groups[7].facets[13].name,
         ],
         datasets: [
           {
             label: "Blois",
-            data: [1, 1, 0, 1, 0, 1], // Les données seront remplies lorsque la première requête à l'API sera effectuée
+            data: [1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1], // Les données seront remplies lorsque la première requête à l'API sera effectuée
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
               // "rgba(54, 162, 235, 0.2)",
@@ -161,9 +167,23 @@ fetch(apiUrl) //Récupere les données de l'API
           },
           {
             label: data.records[3].fields.city,
-            data: [1, 0, 0, 1, 0, 1],
+            data: [1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1],
             backgroundColor: ["rgba(54, 162, 235, 0.2)"],
             borderColor: ["rgba(54, 162, 235, 1)"],
+            borderWidth: 3,
+          },
+          {
+            label: data.records[9].fields.city,
+            data: [1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1],
+            backgroundColor: ["rgba(75, 192, 192, 0.2)"],
+            borderColor: ["rgba(75, 192, 192, 1)"],
+            borderWidth: 3,
+          },
+          {
+            label: data.records[4].fields.city,
+            data: [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1],
+            backgroundColor: ["rgba(153, 102, 255, 0.2)"],
+            borderColor: ["rgba(153, 102, 255, 1)"],
             borderWidth: 3,
           },
         ],
