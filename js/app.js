@@ -22,6 +22,7 @@ fetch(apiUrl) //Récupere les données de l'API
     console.log(data);
     const ctx = document.getElementById("prixVille").getContext("2d");
     const mid = document.getElementById("midPrice").getContext("2d");
+    const nbs = document.getElementById("nbStation").getContext("2d");
     const myChart = new Chart(ctx, {
       type: "bar",
       data: {
@@ -167,24 +168,24 @@ fetch(apiUrl) //Récupere les données de l'API
           },
           {
             label: data.records[3].fields.city,
-            data: [1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1],
+            data: [1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1],
             backgroundColor: ["rgba(54, 162, 235, 0.2)"],
             borderColor: ["rgba(54, 162, 235, 1)"],
-            borderWidth: 3,
+            borderWidth: 1,
           },
           {
             label: data.records[9].fields.city,
             data: [1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1],
             backgroundColor: ["rgba(75, 192, 192, 0.2)"],
             borderColor: ["rgba(75, 192, 192, 1)"],
-            borderWidth: 3,
+            borderWidth: 1,
           },
           {
             label: data.records[4].fields.city,
             data: [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1],
             backgroundColor: ["rgba(153, 102, 255, 0.2)"],
             borderColor: ["rgba(153, 102, 255, 1)"],
-            borderWidth: 3,
+            borderWidth: 1,
           },
         ],
       },
@@ -200,7 +201,51 @@ fetch(apiUrl) //Récupere les données de l'API
         },
       },
     });
+    const station = new Chart(nbs, {
+      type: "doughnut",
+      data: {
+        labels: [
+          data.facet_groups[8].facets[0].name,
+          data.facet_groups[8].facets[1].name,
+          data.facet_groups[8].facets[2].name,
+          data.facet_groups[8].facets[3].name,
+          data.facet_groups[8].facets[4].name,
+          data.facet_groups[8].facets[5].name,
+        ],
+        datasets: [
+          {
+            label: "Ventes",
+            data: [
+              data.facet_groups[8].facets[0].count,
+              data.facet_groups[8].facets[1].count,
+              data.facet_groups[8].facets[2].count,
+              data.facet_groups[8].facets[3].count,
+              data.facet_groups[8].facets[4].count,
+              data.facet_groups[8].facets[5].count,
+            ],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 2,
+          },
+        ],
+      },
+    });
   })
+
   .catch((error) => {
     console.error(error);
   });
