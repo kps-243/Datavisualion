@@ -11,57 +11,150 @@
 </head>
 
 <body>
-    <h1 id="title">SAE 303 Datavisualisation</h1>
-    <div class="container">
-        <canvas id="prixVille"></canvas>
-    </div>
 
-    <section>
-        <h2>Le prix du gazole des villes</h2>
-        <p>Ce graphique montre la comparaison des prix dans différentes villes. On peut voir que les prix varient
-            considérablement d'une ville à l'autre. Par exemple, les prix sont relativement bas dans la ville A, tandis
-            qu'ils sont beaucoup plus élevés dans la ville B. De manière générale, on constate que les prix sont plus
-            élevés dans les grandes villes que dans les petites. Cependant, il y a quelques exceptions, comme la ville
-            C, où les prix sont relativement bas malgré sa taille importante. </p>
-    </section>
-    <div class="container">
-        <canvas id="midPrice"></canvas>
-    </div>
+    <header>
+        <nav>
+            <div id="logo"><img src="./svg/local_gas_station_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
+            <ul>
+                <li class="menu-item">
+                    <a href="#">Ville</a>
+                    <span class="underline"></span>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Gazole</a>
+                    <span class="underline"></span>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Carburants</a>
+                    <span class="underline"></span>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Services</a>
+                    <span class="underline"></span>
+                </li>
+            </ul>
+        </nav>
+        <!--Content before waves-->
+        <div class="inner-header flex">
+            <h1>SAE 301</h1>
+        </div>
 
-    <section>
-        <h2>Différence des prix des carburants</h2>
-        <p>Le graphique en barres présente une comparaison de la moyenne des prix du gazole pour différents types de
-            carburant : SP98, SP95, E10 et le gazole.
-            Les barres sont disposées horizontalement avec l'axe des x indiquant les différents types de carburants,
-            SP98, SP95, E10 et le gazole. L'axe des y indique les prix en unité monétaire, généralement en € ou $.
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
 
-            La première barre représentant le gazole est colorée en jaune, elle montre que la moyenne du prix du gazole
-            est de 1,464.
-            La deuxième barre représentant le SP98 est colorée en bleu, elle montre que la moyenne du prix du SP98 est
-            de 1,583.
-            La troisième barre représentant le SP95 est colorée en rouge, elle montre que la moyenne du prix du SP95 est
-            de 1,53.
-            La quatrième barre représentant le E10 est colorée en vert, elle montre que la moyenne du prix du E10 est de
-            1,68.
-            Il est possible de voir que le E10 est le carburant le plus cher et le gazole le moins cher parmi les 4
-            présentés dans le graphique.
+    </header>
+    <!--Header ends-->
 
-            Il est aussi important de noter qu'en utilisant une échelle adapté pour les valeurs sur l'axe des y, cela
-            permet de mieux visualiser les différences de prix entre les différents types de carburants.
-            Ainsi, il est possible de voir que les différences de prix entre les quatre types de carburant sont
-            relativement faibles, avec une différence de moyenne de 0,216€ entre le gazole et le E10, le plus cher.
-        </p>
-    </section>
-    <div class="container">
-        <canvas id="service"></canvas>
-    </div>
+    <!--Content starts-->
 
-    <div class="container">
-        <canvas id="nbStation"></canvas>
-    </div>
+    <!-- Button -->
+    <section class="nav">
+        <div class="button">
+            <button>
+                <a href="#essence">Graphe 1</a>
+            </button>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/app.js"></script>
+        <div class="button">
+            <button>
+                <a href="#essence">Graphe 2</a>
+            </button>
+        </div>
+
+        <div class="button">
+            <button>
+                <a href="#essence">Graphe 3</a>
+            </button>
+        </div>
+
+        <div class="button">
+            <button>
+                <a href="#essence">Graphe 4</a>
+            </button>
+        </div>
+        </nav>
+
+        <div class="content flex">
+            <h2>Le prix des villes</h2>
+        </div>
+
+
+        <div class="container">
+            <canvas id="prixVille"></canvas>
+        </div>
+
+        <section class="little-text">
+            <h2 class="content">Le prix du gazole des villes</h2>
+            <p class="content">Ce graphique montre la comparaison des prix dans différentes villes. On peut voir que les
+                prix varient
+                considérablement d'une ville à l'autre. Par exemple, les prix sont relativement bas dans la ville A,
+                tandis
+                qu'ils sont beaucoup plus élevés dans la ville B. De manière générale, on constate que les prix sont
+                plus
+                élevés dans les grandes villes que dans les petites. Cependant, il y a quelques exceptions, comme la
+                ville
+                C, où les prix sont relativement bas malgré sa taille importante. </p>
+        </section>
+
+        <div class="container">
+            <canvas id="midPrice"></canvas>
+        </div>
+
+        <section class="big-text">
+            <h2 class="content">Différence des prix des carburants</h2>
+            <p class="content">Le graphique en barres présente une comparaison de la moyenne des prix du gazole pour
+                différents types de
+                carburant : SP98, SP95, E10 et le gazole.
+                Les barres sont disposées horizontalement avec l'axe des x indiquant les différents types de carburants,
+                SP98, SP95, E10 et le gazole. L'axe des y indique les prix en unité monétaire, généralement en € ou $.
+
+                La première barre représentant le gazole est colorée en jaune, elle montre que la moyenne du prix du
+                gazole
+                est de 1,464.
+                La deuxième barre représentant le SP98 est colorée en bleu, elle montre que la moyenne du prix du SP98
+                est
+                de 1,583.
+                La troisième barre représentant le SP95 est colorée en rouge, elle montre que la moyenne du prix du SP95
+                est
+                de 1,53.
+                La quatrième barre représentant le E10 est colorée en vert, elle montre que la moyenne du prix du E10
+                est de
+                1,68.
+                Il est possible de voir que le E10 est le carburant le plus cher et le gazole le moins cher parmi les 4
+                présentés dans le graphique.
+
+                Il est aussi important de noter qu'en utilisant une échelle adapté pour les valeurs sur l'axe des y,
+                cela
+                permet de mieux visualiser les différences de prix entre les différents types de carburants.
+                Ainsi, il est possible de voir que les différences de prix entre les quatre types de carburant sont
+                relativement faibles, avec une différence de moyenne de 0,216€ entre le gazole et le E10, le plus cher.
+            </p>
+        </section>
+        <div class="container">
+            <canvas id="service"></canvas>
+        </div>
+
+        <div class="container">
+            <canvas id="nbStation"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./js/app.js"></script>
 </body>
 
 </html>

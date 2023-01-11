@@ -10,9 +10,6 @@ function average(arr) {
   return sum / arr.length;
 }
 
-const numbers = [1, 2, 3, 4, 5];
-console.log(average(numbers));
-
 const apiUrl =
   "https://public.opendatasoft.com/api/records/1.0/search/?dataset=prix_des_carburants_j_7&q=&facet=cp&facet=pop&facet=city&facet=automate_24_24&facet=fuel&facet=shortage&facet=update&facet=services&facet=brand&refine.pop=R";
 
@@ -64,6 +61,10 @@ fetch(apiUrl) //Récupere les données de l'API
             borderWidth: 2,
           },
         ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
       },
     });
     const priceGazole = [
@@ -125,6 +126,10 @@ fetch(apiUrl) //Récupere les données de l'API
             borderWidth: 2,
           },
         ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
       },
     });
     const service = new Chart(document.getElementById("service"), {
@@ -190,6 +195,8 @@ fetch(apiUrl) //Récupere les données de l'API
         ],
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
           r: {
             angleLines: {
@@ -242,6 +249,10 @@ fetch(apiUrl) //Récupere les données de l'API
             borderWidth: 2,
           },
         ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
       },
     });
   })
