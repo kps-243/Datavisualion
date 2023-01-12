@@ -33,7 +33,7 @@ fetch(apiUrl) //Récupere les données de l'API
         ],
         datasets: [
           {
-            label: "Ventes",
+            label: "Prix du gazole",
             data: [
               data.records[0].fields.price_gazole,
               data.records[1].fields.price_gazole,
@@ -106,7 +106,7 @@ fetch(apiUrl) //Récupere les données de l'API
         ],
         datasets: [
           {
-            label: "Ventes",
+            label: "Moyennes des prix carburants",
             data: [
               average(priceGazole),
               average(priceSp95),
@@ -114,16 +114,16 @@ fetch(apiUrl) //Récupere les données de l'API
               average(priceE10),
             ], // Les données seront remplies lorsque la première requête à l'API sera effectuée
             backgroundColor: [
-              "rgba(171, 58, 183, 0.6)",
-              "rgba(127, 58, 183, 0.6)",
-              "rgba(84, 58, 183, 0.6)",
-              "rgba(116, 108, 235, 0.6)",
+              "rgba(0,191,255, 0.6)",
+              "rgba(30,144,255, 0.6)",
+              "rgba(0,0,255, 0.6)",
+              "rgba(70,130,180, 0.6)",
             ],
             borderColor: [
-              "rgba(171, 58, 183,1.0)",
-              "rgba(127, 58, 183,1.0)",
-              "rgba(84, 58, 183,1.0)",
-              "rgba(116, 108, 235,1.0)",
+              "rgba(0,191,255,1.0)",
+              "rgba(30,144,255,1.0)",
+              "rgba(0,0,255,1.0)",
+              "rgba(70,130,180,1.0)",
             ],
             borderWidth: 2,
           },
@@ -237,6 +237,7 @@ fetch(apiUrl) //Récupere les données de l'API
               "rgba(58, 183, 183, 1.0)",
             ],
             borderWidth: 2,
+            pointLabelFontColor: "rgba(255, 255, 255)",
           },
         ],
       },
