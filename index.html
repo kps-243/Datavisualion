@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-
     <title>Datavisualisation</title>
 </head>
 
@@ -18,19 +17,19 @@
             <div class="menu">
                 <ul>
                     <li class="menu-item">
-                        <a href="#">Ville</a>
+                        <a href="#gazole">Ville</a>
                         <span class="underline"></span>
                     </li>
                     <li class="menu-item">
-                        <a href="#">Gazole</a>
+                        <a href="#shortage">Carburants</a>
                         <span class="underline"></span>
                     </li>
                     <li class="menu-item">
-                        <a href="#">Carburants</a>
+                        <a href="#station">Services</a>
                         <span class="underline"></span>
                     </li>
                     <li class="menu-item">
-                        <a href="#">Services</a>
+                        <a href="#brand">Marque</a>
                         <span class="underline"></span>
                     </li>
                 </ul>
@@ -64,9 +63,9 @@
 
     </header>
 
-    <h2>Le prix du gazole des villes</h2>
+    <h2 id="gazole">Le prix du gazole des villes</h2>
 
-    <div class="container">
+    <div class="container-bar">
         <canvas id="prixVille"></canvas>
     </div>
 
@@ -82,6 +81,9 @@
             ville
             C, où les prix sont relativement bas malgré sa taille importante. </p>
     </article>
+
+    <!-- Waves start -->
+
     <div>
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -96,9 +98,12 @@
             </g>
         </svg>
     </div>
+
+    <!-- Waves end -->
+
     <section class="color">
-        <h2 class="white">Différence des prix des carburants</h2>
-        <div class="container">
+        <h2 class="white" id="shortage">Différence des prix des carburants</h2>
+        <div class="container-bar">
             <canvas id="midPrice"></canvas>
         </div>
 
@@ -111,6 +116,9 @@
                 SP98, SP95, E10 et le gazole. L'axe des y indique les prix en unité monétaire, généralement en € ou $.
             </p>
         </article>
+
+        <!-- Waves start -->
+
         <div>
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -126,10 +134,13 @@
                 </g>
             </svg>
         </div>
+
+        <!-- Waves end -->
+
     </section>
 
     <section>
-        <h2>Les différents services proposées par rapport au station des villes</h2>
+        <h2 id="station">Les différents services proposées par rapport au station des villes</h2>
         <div class="container">
             <canvas id="service"></canvas>
         </div>
@@ -141,6 +152,9 @@
                 additivé ou encore des relais colis. Ce graphe représente les services communs présents dans 4 villes
                 différentes.</p>
         </article>
+
+        <!-- Waves start -->
+
         <div>
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -156,9 +170,12 @@
                 </g>
             </svg>
         </div>
+
+        <!-- Waves end -->
+
     </section>
     <section class="color">
-        <h2 class="white">Répartition des stations services en fonction des marques</h2>
+        <h2 class="white" id="brand">Répartition des stations services en fonction des marques</h2>
         <div class="container">
             <canvas id="nbStation"></canvas>
         </div>

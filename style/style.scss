@@ -308,6 +308,7 @@ footer{
   }
   #logo{
     z-index: 2;
+    margin-left: 20px;
   }
   .burger{
     top: 50px;
@@ -399,8 +400,12 @@ footer{
 }
 }
 
-.container{
+.container-bar{
   height: 250px;
+}
+
+.container{
+  height: 400px;
 }
 }
 
