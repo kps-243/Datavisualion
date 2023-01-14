@@ -125,11 +125,16 @@ p {
   margin: auto;
 }
 
-.container{
+.container, .container-bar{
   padding-top: 70px;
   width: 80vw;
-  height: 500px;
   margin: auto;
+}
+.container{
+  height: 400px;
+}
+.container-bar{
+  height: 250px;
 }
 .white{
   color: white;
